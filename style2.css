@@ -1,0 +1,152 @@
+:root{
+    --primary: #1f1e1e;
+    --secondary: white;
+    --tertiary: #0d0c0c;
+  }
+
+  .dark-theme{
+    --primary: #ffffff;
+    --secondary: black;
+    --tertiary: #999999;
+
+  }
+
+  @media screen and (max-width: 600px) {
+  div.container {
+    width: 100%;
+    background-color: var(--primary);
+  }
+  }
+
+  body{
+    background-color: var(--tertiary);
+    transition: background-color .2s ease;
+  }
+
+  nav{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+
+  a{
+  background-color: black;
+  color: white;
+  text-decoration:none;
+  }
+.sticky{
+  position: fixed;
+  bottom: 45px;
+  right: 55px;
+  width: 40px;
+}
+.stickybg{
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  background-color: var(--tertiary);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px #1a1919;
+}
+
+.hoverable{
+  position: relative;
+}
+.hoverable::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F84923;
+  transition: width 0.3s;
+}
+.hoverable:hover::after{
+	width: 90%;
+}
+
+.container{
+  transition: background-color .2s ease;
+  color: var(--secondary);
+  margin: auto;
+  padding: 70px 0;
+  width: 97%;
+  background-color: var(--primary);
+  }
+.text-box{
+  font-size: 10vw;
+  text-align: center;
+  line-height: 160px;
+  color: transparent;
+  -webkit-text-stroke:  1px var(--secondary);
+  background: url(images/back2.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  font-family: Georgia, serif;
+
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+    }
+}
+
+.flex-container{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.flex-container > div{
+  margin: 10px;
+  padding: 70px 0;
+  width: 50%
+}
+.flex-container p{
+  font-size: 2vw;
+  font-family: Cursive, Brush Script MT;
+}
+.button1 {
+  background-color: #F84923;
+  border: 2px solid #F84923;
+  color: var(--secondary);
+  padding: 15px 32px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.button1:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: 2px solid black;
+  transition:  .5s;
+}
+
+.active{
+  position: relative;
+  height: 52px;
+}
+.active:after{
+  width: 90%;
+}
+
+.divider{
+  width: 80%;
+  margin: auto;
+  border: solid #F84923;
+}
+
+.header{
+  font-size: 4vw;
+  color: #F84923;
+  text-align: center;
+}

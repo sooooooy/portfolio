@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	
+    <title>Hello, world!</title>
+  </head>
+  
+  <body>
+  
+	<nav>
+		<div class="w3-bar w3-xlarge">
+		  <a href="#" class=" active hoverable w3-bar-item w3-hide-small">HOME</a>
+		  <a href="#" class="hoverable w3-bar-item w3-hide-small">PROFILE</a>
+		  <a href="#" class="hoverable w3-bar-item w3-hide-small">CONTACT</a>
+		  <a href="javascript:void(0)" class="w3-bar-item w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+		</div>
+		<div id="demo" class="w3-white w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-xlarge">
+		  <a href="#" class="w3-bar-item">Link 1</a>
+		  <a href="#" class="w3-bar-item">Link 2</a>
+		  <a href="#" class="w3-bar-item">Link 3</a>
+		</div>
+	</nav>
+	<br><br><br>
+	<div class="container">
+		<div class="flex-container">
+			<div>
+				<h1 class="text-box">PIOLO</h1>
+			</div>
+			<div>
+				<p>I actively seek out new technologies and stay up-to-date on industry trends and advancements.</p>
+				<a class="button1" href="">Explore my Portfolio</a>
+	      <a class="button1" href=""> Connect with me</a>
+			</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br>
+		<hr class="divider">
+		<h1 class="header">HOBBY</h1>
+	</div>
+
+	
+
+	<div class="stickybg">
+		<img class="sticky" src="images/sun.png" id="icon"></img>
+	</div>
+
+	<script>
+	var icon = document.getElementById("icon");
+	icon.onclick = function(){
+		document.body.classList.toggle("dark-theme");
+		if(document.body.classList.contains("dark-theme")){
+			icon.src = "images/moon.png";
+		}else{
+			icon.src = "images/sun.png";
+		}
+	}
+
+	function myFunction() {
+	  var x = document.getElementById("demo");
+	  if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+	  } else { 
+		x.className = x.className.replace(" w3-show", "");
+	  }
+	}
+	</script>
+  </body>
+  
+</html>
